@@ -1,26 +1,24 @@
-var output = output
-
 function setOutput(number) {
-    output += number;
+    document.getElementById('output').value += number;
 }
 
 function cal() {
-    let input = output;
+    let input = document.getElementById('output').value;
     console.log(input)
 
     //ham eval() tinh toan bieu thuc string
     result = eval(input);
 
-    output = result;
+    document.getElementById('output').value = result;
     return false
 }
 
 function clr() {
-    output = ''
+    document.getElementById('output').value = ''
 }
 
 function del() {
-    let input = output
+    let input = document.getElementById('output').value
     let newInput = input.substring(0, input.length - 1);
-    output = newInput;
+    document.getElementById('output').value = newInput;
 }
